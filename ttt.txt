@@ -1,0 +1,18 @@
+proxies:
+  - name: saudi-proxy
+    type: http
+    server: res.geonix.com
+    port: 10005
+    username: "bcf8c2d6fd47740a"
+    password: "gM2qb5tiQENTJsFL"
+    udp: false
+
+proxy-groups:
+  - name: Auto
+    type: select
+    proxies:
+      - saudi-proxy
+      - DIRECT
+
+rules:
+  - MATCH,Auto
